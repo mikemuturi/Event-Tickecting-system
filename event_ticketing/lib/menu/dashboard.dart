@@ -1,6 +1,7 @@
 import 'package:event_ticketing/Admin/admin_dashboard.dart';
-import 'package:event_ticketing/menu/category.dart';
+import 'package:event_ticketing/menu/category/category.dart';
 import 'package:event_ticketing/menu/main_home.dart';
+import 'package:event_ticketing/menu/profile_screen.dart';
 import 'package:event_ticketing/menu/settings.dart';
 
 import 'package:flutter/material.dart';
@@ -14,9 +15,9 @@ class DashBoard extends StatefulWidget {
 class _DashBoardState extends State<DashBoard> {
   int _selectedIndex = 0;
 
-  static List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     MainHome(),
-    CategoryScreen(),
+    CategoryPage (),
     AdminDashboard(),
     SettingsScreen(),
   ];
@@ -34,15 +35,20 @@ class _DashBoardState extends State<DashBoard> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF007A37),
-        title: Text(
+        title: const Text(
           'Dashboard',
           style: TextStyle(color: Colors.white, fontSize: 22),
         ),
+         centerTitle: true,
         actions: [
           CircleAvatar(
             backgroundColor: Colors.white,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()
+                ));
+              },
               icon: Icon(Icons.person, color: Colors.black),
             ),
           )
@@ -67,7 +73,7 @@ class _DashBoardState extends State<DashBoard> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings,color: Colors.black,),
-            label: 'Profile',
+            label: 'Settings',
           ),
         ],
         currentIndex: _selectedIndex,

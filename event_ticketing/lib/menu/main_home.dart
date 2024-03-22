@@ -41,19 +41,19 @@ class _MainHomeState extends State<MainHome> {
                       ),
                       items: [
                         Image.network(
-                          'https://via.placeholder.com/200',
+                          'https://cdn.pixabay.com/photo/2017/09/05/10/19/business-2717063_640.jpg',
                           fit: BoxFit.cover,
                         ),
                         Image.network(
-                          'https://via.placeholder.com/200',
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfxtY-LzFy_Egc9FWalz2lEN-gARrVaoAUqQ&usqp=CAU',
                           fit: BoxFit.cover,
                         ),
                         Image.network(
-                          'https://via.placeholder.com/200',
+                          'https://cdn.pixabay.com/photo/2017/09/05/10/19/business-2717063_640.jpg',
                           fit: BoxFit.cover,
                         ),
                         Image.network(
-                          'https://via.placeholder.com/200',
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfxtY-LzFy_Egc9FWalz2lEN-gARrVaoAUqQ&usqp=CAU',
                           fit: BoxFit.cover,
                         ),
                       ],
